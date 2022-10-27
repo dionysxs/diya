@@ -16,7 +16,7 @@ required = ("\nUse only A, B, C, yes or no\n") #Cutting down on duplication
 #The story is broken into sections, starting with "intro"
 def intro():
     print ('''You hear the faint sound of your alarm blairing against your ear.
-Annoyed you slam your hand down on it. you hate waking up early but today you have too
+Annoyed you slam your hand down on it. you hate waking up early but today you have too.
 It's the first day at your new school, hogwarts, after all.
 You look at the time. It's 6 in the morning, 2 hours until your train leaves
 
@@ -84,15 +84,36 @@ def s3b():
 def s4a():
     print(''' the soft wobbling and sound of the train lulled you to sleep.
     OH NO! because you fell asleep you missed the stop and nobody woke you up! you walk out of the now empty train and look around, do you start panicking?''')
+    choice = input(">>>")
+    if choice.lower() == "yes":
+        s5a()
+    elif choice.lower() == "no":
+        s5b()
 
 def s4b():
     print('''are you gonna be nice to the people you're sitting with?''')
     choice = input(">>>")
     if choice.lower() == "yes":
-        s5a()
+        s6a()
     elif choice.lower() == "no":
         s4a()
 
+def s5a():
+    print(''' you start walking in circles while grabbing your head. you're panicking!!! you start to frantially look around and scream for help.
+    suddenly you hear something behind you. you look around and see a group of centaurs. they heard you panicking!
+    the centaurs tell you that they'll help you if you i give them something in return. what do you give them?
+    A. give them home made cookies
+    B. give an old sock
+    C. give a fancy pen''')
+    choice = input (">>>")
+    if choice.lower() == "a, c":
+        s7a()
+    elif choice.lower() == "b":
+        s7b()
+
+def s6a():
+    print(''' you start making conversation with the people you're sitting with''')
+    
 
 
 print(required)
