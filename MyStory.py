@@ -2,6 +2,7 @@
 
 
 import time #Imports a module to add a pause
+import random
 
 #Figuring out how users might respond
 answer_A = ["A", "a"]
@@ -11,7 +12,7 @@ yes = ["Y", "y", "yes"]
 no = ["N", "n", "no"]
 
 
-required = ("\nUse only A, B, C, yes or no\n") #Cutting down on duplication
+required = ("\nUse only a or b\n") #Cutting down on duplication
 
 #The story is broken into sections, starting with "intro"
 def intro():
@@ -287,6 +288,77 @@ def s12a():
     do you run or walk to the school?
     A. run
     B. walk''')
+    choice = input(">>>")
+    if choice.lower() == "a":
+        print(''' you start running at full speed towards the school only to see that the fence is closed shut''')
+        s12b()
+    elif choice.lower() == "b":
+        print(''' you slowly walk to the school because you've used up all your energy by just getting to this point but alas, 
+        you find out that the gate is closed''')
+        s12b()
+
+
+def s12b():
+    print(''' do climb over the fence?
+    A. yes
+    B. no''')
+    choice = input (">>>")
+    if choice.lower() == "a":
+        print(''' you walk back and then you take a big leap up the fence, you grab the top of the fence and pull yourself up. YOU DID IT- oh,
+    you fell flat on your face but hey, at least you made it''')
+        s14a()
+    elif choice.lower() == "b":
+        print(''' you look for another way inside and hey! there's a tiny hole in de side of the fence. you
+        shawiggle your way in, ti was a tight fit but you made it.''')
+        s14a()
+    
+
+
+def s14a():
+    print(''' you rush into the school but oh no, you're still drenched.
+    do you walk in like this or grab someone's bag in the hope for clothes?
+    A. walk ik like this
+    B. take someone's bag''')
+    choice = input(">>>")
+    if choice.lower() == "a":
+        s13b()
+    elif choice.lower() == "b":
+        s13a()
+
+
+def s13a():
+    print(''' you snatch someone's bag before anyone notices. you look into the bag but there are no clothes in it and
+    for the cherry on top, a teacher caught you and asks what you're doing.
+    do you lie to the teacher?
+    A. yes
+    B. no''')
+    choice = input(">>>")
+    if choice.lower() == "a":
+        print(''' the teacher looks at you with a "are you serious?" face. the teacher just shakes his head and
+        drags you into the great hall right as your name it called. time for you to get sorted.''')
+        s15a()
+    elif choice.lower() == "b":
+        print(''' the teacher just shakes his head and drags you into the great hall right as your name is called.
+        it's time for you to get sorted''')
+        s15a()
+
+
+def s13b():
+    print(''' you walk into the great hall right as your name is called.
+    it's time for you to get sorted''')
+
+
+def s15a():
+    number = random.randint(1,4)
+    if number == 1: print ("you got sorted in Slytherin WOOOOOO")
+
+    elif number == 2: print ("you got sorted in griffendor WOOOOO")
+
+    elif number == 3: print ("you got sorted in ravenclaw WOOOO")
+    
+    elif number == 4: print ("you got sorted in huffelpuff WOOOOO")
+
+
 
 
 print(required)
