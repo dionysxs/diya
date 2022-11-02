@@ -143,10 +143,9 @@ def s5b():
     for someone to hear you. suddenly you hear something behind you. you look around and see a group of centaurs. they heard you panicking!
     the centaurs tell you that they'll help you if you i give them something in return. what do you give them?
     A. give them home made cookies
-    B. give an old sock
-    C. give a fancy pen''')
+    B. give an old sock''')
     choice = input (">>>")
-    if choice.lower() == "a, c":
+    if choice.lower() == "a":
         s7a()
         s6b()
     elif choice.lower() == "b":
