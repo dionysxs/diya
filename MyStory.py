@@ -134,7 +134,7 @@ def s6a():
     do you look for something to get you home?
     A. yes''')
     choice = input (">>>")
-    if choice.lower() == "a, yes":
+    if choice.lower() == "a":
         s8a()
 
 
@@ -316,7 +316,7 @@ def s12b():
 def s14a():
     print(''' you rush into the school but oh no, you're still drenched.
     do you walk in like this or grab someone's bag in the hope for clothes?
-    A. walk ik like this
+    A. walk in like this
     B. take someone's bag''')
     choice = input(">>>")
     if choice.lower() == "a":
@@ -351,7 +351,7 @@ def s15a():
     number = random.randint(1,4)
     if number == 1: print ("you got sorted in Slytherin WOOOOOO")
 
-    elif number == 2: print ("you got sorted in griffendor WOOOOO")
+    elif number == 2: print ("you got sorted in griffindor WOOOOOO")
 
     elif number == 3: print ("you got sorted in ravenclaw WOOOO")
     
